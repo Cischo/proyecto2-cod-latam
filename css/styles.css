@@ -1,0 +1,298 @@
+/* En este archivo escriban su CSS */
+
+/* Fonts */
+/* Importar aquí la font */
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    background-color: #fbfbfb;
+    color: #0f0f0f;
+}
+/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
+*  cuyos valores asigna por defecto el navegador.
+*/
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Para que el scrolleo en la one page sea suave */
+    scroll-behavior: smooth;
+
+}
+h1{
+    font-size: 36px;
+    margin-top: 16px;
+}
+h2{
+    font-size: 28px;
+    text-align: center;
+}
+p{
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Para quitar los puntos a los items de listas */
+ul {
+    list-style: none;
+}
+
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
+*  el margin: auto; para tenerlo centrado fácilmente ;)
+*/
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Recomendaciones!
+*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
+*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
+*
+*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
+*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
+*
+*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
+*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
+*
+*  - Usen mucho las herramientas para desarrolladores del navegador para ir
+*    probando el CSS que escriben, resolver dudas y problemas.
+*
+*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
+*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
+*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
+*/
+                                /*Estilos del header*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    box-shadow: 0 3px 10px -5px #5f5f5f;
+    background-color: #fbfbfb;
+}
+header nav{
+  height: 50vh;
+  /* width: 100vw; */
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  /* padding: 2rem; */
+  margin: 0 auto;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+}
+.hidden{
+  display: none;
+}
+header nav.visible{
+  opacity: 1;
+  visibility: visible;
+}
+.logo{
+    height: 90px;
+    width: 90px;
+}
+ul#menu{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-left: 2rem;
+}
+li.menu-item a{
+    justify-content: space-between;
+    color: white;
+}
+.abrir-menu{
+  padding-right: 1rem;
+  color: #1c1c1c;
+}
+.abrir-menu,
+.cerrar-menu{
+  display: block;
+  border: none;
+  font-size: 2rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+.cerrar-menu{
+  color: #ececec;
+}
+                                /*Estilos del main-section#inicio*/
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 26px;
+    min-height: 100vh;
+    padding-top: 120px;
+}
+#main-sectioninicio{
+    justify-content: space-around;
+}
+#inicio{
+    padding: 0px;
+    height: 5vh;
+}
+.perfil{
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -3px 10px -5px #5f5f5f;
+    margin-top: 75px;
+    height: 375px;
+    width: 400px;
+}
+.hi{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+a.btn{
+    display: flex;
+    width: 200px;
+    height: 40px;
+    padding: 12px 20px;
+    margin-top: 16px;
+    border-radius: 50rem;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    color: #fbfbfb;
+    background-color: #af5996;
+    cursor: pointer;
+}
+                                    /*Estilos del main-section#contacto*/
+#main-sectioncontacto{
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+}
+article{
+    background-color: rgba(175, 89, 158, 0.3);
+    border-radius: 5px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+ul.menu-contacto{
+    display: flex;
+    align-items: center;
+}
+.redes{
+    margin: 30px;
+}
+.red{
+    width: 65px;
+    height: 65px;
+}
+                                            /* Estilos del footer */
+footer{
+    display: flex;
+    width: 100%;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+    background-color: #af599e;
+}
+footer a{
+    color: #fbfbfb;
+    padding-bottom: 18px;
+}
+                                            /*ESTILOS DESKTOP*/
+@media screen and (min-width: 1024px){
+                                            /* Estilos Header */
+  header{
+    height: 120px;
+    }
+    .abrir-menu,
+    .cerrar-menu{
+      display: none;
+    }
+    header nav{
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-end;
+        align-items: center;
+        height: 120px;
+        box-shadow: none;
+        background-color: #fbfbfb;
+        visibility: visible;
+        opacity: 1;
+      }
+  .logo{
+      height: 120px;
+      width: 120px;
+  }
+  ul#menu{
+    flex-direction: row;
+  }
+  li.menu-item a{
+      width: 20rem;
+      justify-content: space-between;
+      align-items:center;
+      padding-right: 2rem;
+      color: black;
+  }
+                                                /* Estilos main */
+
+  #inicio{
+        padding: 0px;
+        height: 105vh;
+    }
+  #main-sectioninicio{
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  figure{
+    padding-bottom: 4rem;
+    padding-left: 5rem;
+  }
+  .hi {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 3rem;
+  }
+  .main-sectioninicio_p{
+    text-align: justify;
+  }
+  .main-article{
+    width: 60%;
+    padding: 2rem;
+  }
+  .main-article h2{
+    font-size: 2rem
+  }
+  .redes{
+    margin: 2rem
+  }
+  .red{
+      width: 70px;
+      height: 70px;
+  }
+}
