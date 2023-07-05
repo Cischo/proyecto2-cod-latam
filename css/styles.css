@@ -290,6 +290,7 @@ footer a{
       font-size: 2rem;
       background-color: transparent;
       border: none;
+      color: inherit;
     }
     .modo-diurno-1024{
       margin-right: .5rem;
@@ -306,7 +307,7 @@ footer a{
         background-color: #fbfbfb;
         visibility: visible;
         opacity: 1;
-      }
+  }
   .logo{
       height: 120px;
       width: 120px;
@@ -325,7 +326,7 @@ footer a{
       justify-content: center;
       align-items:center;
       margin-right: 1rem;
-      color: black;
+      color: inherit;
   }
   li.menu-item a.contacto{
     width: 6rem;
@@ -334,7 +335,7 @@ footer a{
     justify-content: center;
     align-items:center;
     margin-right: 1rem;
-    color: black;
+    color: inherit;
   }
                                                 /* Estilos main */
 

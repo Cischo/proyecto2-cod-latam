@@ -3,10 +3,12 @@ const abrir = document.querySelector('#abrir');
 const cerrar = document.querySelector('#cerrar');
 const menuItems = document.querySelectorAll(".menu-item");
 const nocturnoMob = document.querySelector("#nocturno-mob");
-const nocturno1024 = document.querySelector("#nocturno-1024");
+const nocturno1024 = document.querySelector("#nocturno1024");
+const diurno1024 = document.querySelector("#diurno1024");
 const diurnoMob = document.querySelector("#diurno-mob");
 const body = document.querySelector("#body");
 const header = document.querySelector("#header");
+const menu = document.querySelector("#menu");
 
 
 abrir.addEventListener("click", () => {
@@ -33,6 +35,22 @@ nocturnoMob.addEventListener("click", () => {
   body.classList.add("night");
   header.classList.add("night");
   nav.classList.add("night");
+});
+
+diurno1024.addEventListener("click", () => {
+  body.classList.remove("night");
+  header.classList.remove("night");
+  nav.classList.remove("night");
+  menu.classList.remove("night");
+
+
+});
+nocturno1024.addEventListener("click", () => {
+  body.classList.add("night");
+  header.classList.add("night");
+  nav.classList.add("night");
+  menu.classList.add("night");
+
 });
 
 // nocturnoMob.forEach(function (noche){
