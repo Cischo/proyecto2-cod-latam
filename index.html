@@ -13,19 +13,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato:ital,wght@0,400;1,700&family=Nanum+Gothic&family=Suwannaphum:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
-   <header>
+<body id="body">
+   <header id="header">
         <a href="">
             <img src="img/logo.jpg" alt="Logo de una compañía" class="logo"></a>
             <button type="button" name="button" class="abrir-menu" id="abrir" class="hamburguesa"><i class="bi bi-list"></i></button>
+            <button type="button" name="button" class="modo-diurno-1024" id="diurno1024"><i class="bi bi-brightness-high-fill"></i></button>
+            <button type="button" name="button" class="modo-nocturno-1024" id="nocturno1024"><i class="bi bi-moon-fill"></i></button>
         <nav id="nav">
-          <button type="button" name="button" class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+          <div class="iconos">
+            <button type="button" name="button" class="modo-diurno" id="diurno-mob" ><i class="bi bi-brightness-high"></i></button>
+            <button type="button" name="button" class="modo-nocturno" id="nocturno-mob"><i class="bi bi-moon"></i></button>
+            <button type="button" name="button" class="cerrar-menu" id="cerrar" ><i class="bi bi-x"></i></button>
+          </div>
             <ul id="menu">
-                <li class="menu-item">
-                    <a href="#inicio">Inicio</a>
+                <li class="menu-item" >
+                    <a href="#inicio" class="active">Inicio</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#contacto">Contacto</a>
+                    <a href="#contacto" class="contacto">Contacto</a>
                 </li>
             </ul>
         </nav>
@@ -39,7 +45,7 @@
             <div class="hi">
             <h1 >¡Hola, soy Eliécer!</h1>
             <p class="main-sectioninicio_p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit quisquam exercitationem qui, repellendus, amet aliquam in rem expedita harum ex illo? Autem et eos, soluta repellat est itaque mollitia officiis.</p>
-            <a href="documents/Corrector ortotipográfico.pdf" class="btn" download>Descargar mi CV</a>
+            <a href="documents/Corrector ortotipográfico.pdf" class="btn" download target="_blank">Descargar mi CV</a>
             </div>
         </section>
         <section id="main-sectioncontacto">
@@ -64,7 +70,7 @@
         </section>
     </main>
    <footer class="footer">
-        <a href="https://checerovitch.github.io/Proyectos_IS/" target="_blank">¡Cuídate del Phishing!</a>
+        <a href="https://checerovitch.github.io/Proyectos_IS/" target="_blank">¡Por esto debes cuidarte del Phishing!</a>
     </footer>
     <script src="js/main.js" charset="utf-8"></script>
   </body>

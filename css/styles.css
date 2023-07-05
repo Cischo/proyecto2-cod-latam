@@ -84,24 +84,21 @@ header{
     background-color: #fbfbfb;
 }
 header nav{
-  height: 50vh;
-  /* width: 100vw; */
+  height: 100vh;
+  width: 150px;
   opacity: 0;
   visibility: hidden;
   display: flex;
   flex-direction: column;
-  align-items: end;
+  flex-wrap: wrap;
+  align-items: center;
   position: absolute;
-  top: 0;
+  top: 91px;
   right: 0;
   bottom: 0;
   background-color: black;
-  /* padding: 2rem; */
   margin: 0 auto;
   box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
-}
-.hidden{
-  display: none;
 }
 header nav.visible{
   opacity: 1;
@@ -110,32 +107,79 @@ header nav.visible{
 .logo{
     height: 90px;
     width: 90px;
+    margin-left: -.5rem;
 }
 ul#menu{
     display: flex;
+    width: 500px;
     flex-direction: column;
-    align-items: end;
-    padding-left: 2rem;
+    align-items: start;
+    padding-top: .5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
 }
 li.menu-item a{
-    justify-content: space-between;
+    display: flex;
+    justify-content: center;
     color: white;
+    width: 135px;
+}
+li.menu-item a:hover{
+  background-color: gray;
+  border-radius: 10px;
+}
+li.menu-item a.active{
+  background-color: #af5996;
+  border-radius: 10px;
+  cursor: pointer;
 }
 .abrir-menu{
-  padding-right: 1rem;
+  margin-right: 1rem;
   color: #1c1c1c;
 }
-.abrir-menu,
-.cerrar-menu{
+.abrir-menu{
   display: block;
   border: none;
   font-size: 2rem;
   background-color: transparent;
-  cursor: pointer;
+  color: inherit;
+}
+.iconos{
+  display: flex;
+  width: 400px;
+  flex-direction: row;
+  justify-content: space-space-around;
+}
+.cerrar-menu,
+.modo-nocturno,
+.modo-diurno{
+  display: flex;
+  color: #ececec;
+  border: none;
+  font-size: 2rem;
+  background-color: transparent;
 }
 .cerrar-menu{
-  color: #ececec;
+  font-size: 2.5rem;
+  margin-right: 2rem;
+  padding-top: -2rem;
 }
+.modo-nocturno-1024,
+.modo-diurno-1024{
+  display: none;
+}
+                                    /* modos mobile */
+.night{
+  background-color: black;
+  color: white;
+}
+.modo-diurno{
+  background-color: white;
+  color: black;
+}
+
                                 /*Estilos del main-section#inicio*/
 
 section{
@@ -184,6 +228,9 @@ a.btn{
     background-color: #af5996;
     cursor: pointer;
 }
+a.btn:hover{
+  background-color: gray;
+}
                                     /*Estilos del main-section#contacto*/
 #main-sectioncontacto{
     display: flex;
@@ -227,14 +274,33 @@ footer a{
     height: 120px;
     }
     .abrir-menu,
-    .cerrar-menu{
+    .cerrar-menu,
+    .modo-nocturno,
+    .modo-diurno{
       display: none;
+    }
+    .modo-nocturno-1024,
+    .modo-diurno-1024{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin-right: 40rem;
+      cursor: pointer;
+      font-size: 2rem;
+      background-color: transparent;
+      border: none;
+    }
+    .modo-diurno-1024{
+      margin-right: .5rem;
     }
     header nav{
         display: flex;
         flex-direction: row;
+        width: 300px;
         justify-content:flex-end;
         align-items: center;
+        top: 0;
         height: 120px;
         box-shadow: none;
         background-color: #fbfbfb;
@@ -247,13 +313,28 @@ footer a{
   }
   ul#menu{
     flex-direction: row;
+    align-items: flex-start;
+    width: 300px;
+    font-size: 1.2rem;
+    padding-right: 2rem;
   }
   li.menu-item a{
-      width: 20rem;
-      justify-content: space-between;
+      display: flex;
+      width: 4rem;
+      height: 1.3rem;
+      justify-content: center;
       align-items:center;
-      padding-right: 2rem;
+      margin-right: 1rem;
       color: black;
+  }
+  li.menu-item a.contacto{
+    width: 6rem;
+    display: flex;
+    height: 1.3rem;
+    justify-content: center;
+    align-items:center;
+    margin-right: 1rem;
+    color: black;
   }
                                                 /* Estilos main */
 
