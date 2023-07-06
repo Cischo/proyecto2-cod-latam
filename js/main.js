@@ -9,6 +9,11 @@ const diurnoMob = document.querySelector("#diurno-mob");
 const body = document.querySelector("#body");
 const header = document.querySelector("#header");
 const menu = document.querySelector("#menu");
+const fuentes = document.querySelectorAll(".estilos");
+const tamanoS = document.querySelector("#tamano-s");
+const tamanoM = document.querySelector("#tamano-m");
+const tamanoL = document.querySelector("#tamano-l");
+
 
 
 abrir.addEventListener("click", () => {
@@ -42,16 +47,30 @@ diurno1024.addEventListener("click", () => {
   header.classList.remove("night");
   nav.classList.remove("night");
   menu.classList.remove("night");
-
-
 });
 nocturno1024.addEventListener("click", () => {
   body.classList.add("night");
   header.classList.add("night");
   nav.classList.add("night");
   menu.classList.add("night");
-
 });
+tamanoS.addEventListener("click", () => {
+  body.classList.add("estilo-s");
+  header.classList.add("estilo-s");
+  nav.classList.add("estilo-s");
+});
+tamanoM.addEventListener("click", () => {
+    body.classList.add("estilo-m");
+    header.classList.add("estilo-m");
+    nav.classList.add("estilo-m");
+});
+tamanoL.addEventListener("click", () => {
+    body.classList.add("estilo-l");
+    header.classList.add("estilo-l");
+    nav.classList.add("estilo-l");
+});
+
+
 
 // nocturnoMob.forEach(function (noche){
 //   noche.addEventListener("click", function(e) {

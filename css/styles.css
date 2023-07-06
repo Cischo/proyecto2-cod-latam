@@ -85,12 +85,13 @@ header{
 }
 header nav{
   height: 100vh;
-  width: 150px;
+  width: 200px;
   opacity: 0;
   visibility: hidden;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: center;
   position: absolute;
   top: 91px;
@@ -147,10 +148,23 @@ li.menu-item a.active{
   color: inherit;
 }
 .iconos{
+  margin-top: 1rem;
+}
+.iconos,
+.fuentes{
   display: flex;
   width: 400px;
   flex-direction: row;
-  justify-content: space-space-around;
+  margin-bottom: 1rem;
+  margin-right: 5rem;
+  justify-content: flex-start;
+}
+.modo-diurno{
+  margin-left: .6rem;
+  width: 2.6rem;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0rem;
 }
 .cerrar-menu,
 .modo-nocturno,
@@ -160,6 +174,7 @@ li.menu-item a.active{
   border: none;
   font-size: 2rem;
   background-color: transparent;
+  margin-right: 1.5rem;
 }
 .cerrar-menu{
   font-size: 2.5rem;
@@ -179,6 +194,42 @@ li.menu-item a.active{
   background-color: white;
   color: black;
 }
+                                      /* Fuentes */
+#letra-s{
+  font-size: 1rem;
+}
+#letra-m{
+  font-size: 1.5rem;
+}
+#letra-l{
+  font-size: 2.5rem;
+}
+.tamano-s{
+  margin-left: .5rem;
+}
+.tamano-l{
+  margin-right: .1rem;
+}
+.tamano-s,
+.tamano-m,
+.tamano-l{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  width: 2.7rem;
+}
+                                    /* estilos para js tamaño de fuentes */
+.estilo-s{
+  font-size: 1.5rem;
+}
+.estilo-m{
+  font-size: 1.8rem;
+}
+.estilo-l{
+  font-size: 2rem;
+}
+
 
                                 /*Estilos del main-section#inicio*/
 
@@ -276,7 +327,8 @@ footer a{
     .abrir-menu,
     .cerrar-menu,
     .modo-nocturno,
-    .modo-diurno{
+    .modo-diurno,
+    .fuentes{
       display: none;
     }
     .modo-nocturno-1024,
