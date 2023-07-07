@@ -54,21 +54,22 @@ nocturno1024.addEventListener("click", () => {
   nav.classList.add("night");
   menu.classList.add("night");
 });
-tamanoS.addEventListener("click", () => {
-  body.classList.add("estilo-s");
-  header.classList.add("estilo-s");
-  nav.classList.add("estilo-s");
-});
-tamanoM.addEventListener("click", () => {
-    body.classList.add("estilo-m");
-    header.classList.add("estilo-m");
-    nav.classList.add("estilo-m");
-});
-tamanoL.addEventListener("click", () => {
-    body.classList.add("estilo-l");
-    header.classList.add("estilo-l");
-    nav.classList.add("estilo-l");
-});
+// tamanoS.addEventListener("click", () => {
+//   body.classList.add("estilo-s");
+//   header.classList.add("estilo-s");
+//   nav.classList.add("estilo-s");
+// });
+// tamanoM.addEventListener("click", () => {
+//     body.classList.add("estilo-m");
+//     header.classList.add("estilo-m");
+//     nav.classList.add("estilo-m");
+// });
+// tamanoL.addEventListener("click", () => {
+//     body.classList.add("estilo-l");
+//     header.classList.add("estilo-l");
+//     nav.classList.add("estilo-l");
+// });
+
 
 
 
