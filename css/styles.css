@@ -244,8 +244,6 @@ section{
     padding-top: 120px;
 }
 #main-sectioninicio{
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
 }
 #inicio{
