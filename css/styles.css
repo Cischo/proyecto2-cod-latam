@@ -483,9 +483,9 @@ body{
   }
   .redes{
     margin: 2rem
+    background-color: white;
   }
   .red{
       width: 70px;
       height: 70px;
-  }
 }
