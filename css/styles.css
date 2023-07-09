@@ -77,7 +77,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem;
+    padding: 0rem;
     height: 90px;
     width: 100%;
     position: fixed;
@@ -113,6 +113,7 @@ header nav.visible{
     height: 90px;
     width: 90px;
     margin-left: -.5rem;
+    padding: 0;
 }
 ul#menu{
     display: flex;
@@ -202,9 +203,6 @@ li.menu-item a.active{
 .ingles{
   display: none;
 }
-.luna{
-  color: black;
-}
                                     /* estilos modos mobile js */
 .night{
   background-color: black;
@@ -261,7 +259,7 @@ section{
     justify-content: center;
     align-items: center;
     padding: 26px;
-    min-height: 80vh;
+    min-height: 110vh;
     padding-top: 120px;
 }
 #main-sectioninicio{
@@ -298,7 +296,7 @@ a.btn{
     width: 280px;
     height: 3rem;
     padding: 12px 20px;
-    margin-top: 16px;
+    margin-top: 26px;
     border-radius: 50rem;
     font-size: 1.5rem;
     justify-content: center;
