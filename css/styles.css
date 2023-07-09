@@ -8,6 +8,7 @@ body{
     line-height: 1.2;
     background-color: #fbfbfb;
     color: #0f0f0f;
+    transition: background-color 2s ease;
 }
 /* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
 *  cuyos valores asigna por defecto el navegador.
@@ -97,10 +98,12 @@ header nav{
   top: 91px;
   right: 0;
   bottom: 0;
-  background-color: black;
+  background-color: rgba(0,0,0, 0.6);
   margin: 0 auto;
   box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
-
+  border: 1px solid white;
+  border-radius: 10px;
+  backdrop-filter: blur (20px);
 }
 header nav.visible{
   opacity: 1;
@@ -117,8 +120,8 @@ ul#menu{
     flex-direction: column;
     align-items: start;
     padding-top: .5rem;
-    padding-left: .5rem;
-    padding-right: .5rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
     font-size: 1.6rem;
     margin-bottom: 2rem;
 }
@@ -126,16 +129,20 @@ li.menu-item a{
     display: flex;
     justify-content: center;
     color: white;
-    width: 135px;
+    width: 160px;
+    justify-content: flex-start;
+    padding-left: .5rem;
 }
 li.menu-item a:hover{
   background-color: gray;
   border-radius: 10px;
+  transition: background-color 1s ease;
 }
 li.menu-item a.active{
   background-color: #af5996;
   border-radius: 10px;
   cursor: pointer;
+  transition: background-color 1s ease;
 }
 .abrir-menu{
   margin-right: 1rem;
@@ -150,9 +157,12 @@ li.menu-item a.active{
 }
 .iconos{
   margin-top: 1rem;
+  color: black;
+  background-color: transparent;
 }
 .iconos,
-.fuentes{
+.fuentes,
+.english{
   display: flex;
   width: 400px;
   flex-direction: row;
@@ -160,6 +170,11 @@ li.menu-item a.active{
   margin-right: 5rem;
   justify-content: flex-start;
 }
+.english{
+  color: white;
+  margin: 0 auto;
+}
+                                            /* Modos */
 .modo-diurno{
   margin-left: .6rem;
   width: 2.6rem;
@@ -183,13 +198,21 @@ li.menu-item a.active{
   padding-top: -2rem;
 }
 .modo-nocturno-1024,
-.modo-diurno-1024{
+.modo-diurno-1024,
+.ingles{
   display: none;
 }
-                                    /* modos mobile */
+.luna{
+  color: black;
+}
+                                    /* estilos modos mobile js */
 .night{
   background-color: black;
   color: white;
+}
+header nav.night{
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur (10px);
 }
 .modo-diurno{
   background-color: white;
@@ -230,8 +253,6 @@ li.menu-item a.active{
 .estilo-l{
   font-size: 2rem;
 }
-
-
                                 /*Estilos del main-section#inicio*/
 
 section{
@@ -240,7 +261,7 @@ section{
     justify-content: center;
     align-items: center;
     padding: 26px;
-    min-height: 100vh;
+    min-height: 80vh;
     padding-top: 120px;
 }
 #main-sectioninicio{
@@ -268,20 +289,24 @@ section{
 }
 .main-sectioninicio_p{
   transition: 0.5;
-}
+  margin-top: -10px;
+  margin-bottom: -25px;
+  text-align: justify;
+ }
 a.btn{
     display: flex;
-    width: 200px;
-    height: 40px;
+    width: 280px;
+    height: 3rem;
     padding: 12px 20px;
     margin-top: 16px;
     border-radius: 50rem;
-    font-size: 20px;
+    font-size: 1.5rem;
     justify-content: center;
     align-items: center;
     color: #fbfbfb;
     background-color: #af5996;
     cursor: pointer;
+    transition: background-color 1s ease;
 }
 a.btn:hover{
   background-color: gray;
@@ -325,6 +350,9 @@ footer a{
                                             /*ESTILOS DESKTOP*/
 @media screen and (min-width: 1024px){
                                             /* Estilos Header */
+body{
+  transition: background-color 2s ease;
+}
   header{
     height: 120px;
     }
@@ -332,16 +360,18 @@ footer a{
     .cerrar-menu,
     .modo-nocturno,
     .modo-diurno,
-    .fuentes{
+    .fuentes,
+    .english{
       display: none;
     }
     .modo-nocturno-1024,
-    .modo-diurno-1024{
+    .modo-diurno-1024,
+    .ingles{
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
-      margin-right: 40rem;
+      margin-right: 20rem;
       cursor: pointer;
       font-size: 2rem;
       background-color: transparent;
@@ -350,6 +380,10 @@ footer a{
     }
     .modo-diurno-1024{
       margin-right: .5rem;
+    }
+    .ingles{
+      background-color: none;
+      font-size: 1.8rem;
     }
     header nav{
         display: flex;
@@ -363,6 +397,9 @@ footer a{
         background-color: #fbfbfb;
         visibility: visible;
         opacity: 1;
+        border: none;
+        border-radius: none;
+        transition: none;
   }
   .logo{
       height: 120px;
@@ -377,21 +414,23 @@ footer a{
   }
   li.menu-item a{
       display: flex;
-      width: 4rem;
+      width: 5rem;
       height: 1.3rem;
       justify-content: center;
       align-items:center;
       margin-right: 1rem;
       color: inherit;
+      padding-right: .5rem;
   }
   li.menu-item a.contacto{
-    width: 6rem;
+    width: 8rem;
     display: flex;
     height: 1.3rem;
     justify-content: center;
     align-items:center;
-    margin-right: 1rem;
     color: inherit;
+    padding-right: .5rem;
+
   }
                                                 /* Estilos main */
 
@@ -418,6 +457,24 @@ footer a{
   }
   .main-sectioninicio_p{
     text-align: justify;
+  }
+  a.btn{
+      display: flex;
+      width: 280px;
+      height: 3rem;
+      padding: 12px 20px;
+      margin-top: 16px;
+      border-radius: 50rem;
+      font-size: 1.5rem;
+      justify-content: center;
+      align-items: center;
+      color: #fbfbfb;
+      background-color: #af5996;
+      cursor: pointer;
+      transition: background-color 1s ease;
+  }
+  a.btn:hover{
+    background-color: gray;
   }
   .main-article{
     width: 60%;
